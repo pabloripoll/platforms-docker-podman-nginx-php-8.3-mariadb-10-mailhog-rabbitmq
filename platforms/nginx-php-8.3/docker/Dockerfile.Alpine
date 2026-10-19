@@ -77,13 +77,13 @@ RUN apk add --no-cache \
   php83-pdo_sqlite \
   php83-sqlite3 \
   ## Mysql - Mariadb
-  php83-pdo_mysql \
-  php83-mysqlnd \
-  php83-mysqli
+  #php83-pdo_mysql \
+  #php83-mysqlnd \
+  #php83-mysqli
   ## Postgre
-  #php83-pgsql \
-  #php83-pdo_pgsql \
-  #postgresql-dev
+  php83-pgsql \
+  php83-pdo_pgsql \
+  postgresql-dev
   ## MongoDB
   #php83-pecl-mongodb \
   ## Redis
@@ -109,9 +109,9 @@ RUN apk add --no-cache \
 RUN docker-php-ext-install \
   pdo \
   ## Mysql - Mariadb
-  pdo_mysql \
+  #pdo_mysql \
   ## Postgre
-  #pdo_pgsql \
+  pdo_pgsql \
   ## Sockets
   sockets \
   ## Process Control (jobs)

@@ -62,9 +62,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ## SQLite
     libsqlite3-dev \
     ## Mysql - Mariadb
-    default-libmysqlclient-dev \
+    #default-libmysqlclient-dev \
     ## Postgre
-    #libpq-dev \
+    libpq-dev \
     ## MongoDB (for PECL extension)
     #pkg-config \
     #libssl-dev \
@@ -81,11 +81,11 @@ RUN docker-php-ext-install -j$(nproc) \
     ## SQLite
     pdo_sqlite \
     ## Mysql - Mariadb
-    pdo_mysql \
-    mysqli \
+    #pdo_mysql \
+    #mysqli \
     ## Postgre
-    #pdo_pgsql \
-    #pgsql \
+    pdo_pgsql \
+    pgsql \
     ## Other extensions
     zip \
     bcmath \
